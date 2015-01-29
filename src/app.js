@@ -5,6 +5,11 @@
  * Time: 下午3:18
  * To change this template use File | Settings | File Templates.
  */
+var proxy = function(that, fun) {
+    return function() {
+        fun.apply(that, arguments);
+    };
+};
 var lights = (function(_) {
     var pointLight = new _.PointLight(0xFFFFFF);
     pointLight.position.x = 10;
@@ -29,12 +34,12 @@ var objects = (function (_, lights) {
         xx:0.01,
         yy:0.01,
         behavior: function(){
-            this.body.scale.x += this.xx;
-            this.body.scale.y -= this.yy;
-            this.xx -= this.body.scale.x/this.body.scale.y*0.01;
-            this.yy -= this.body.scale.x/this.body.scale.y*0.01;
-            console.log(this.xx, this.yy);
-        }
+            if(this.body.scale.y > this.yy) {
+//                this.body.scale.x += this.xx;
+//                this.body.scale.y -= this.yy;
+            }
+        },
+        on: 'mouse move'
     });
     objs = objs.concat(lights);
     return objs;
@@ -50,14 +55,17 @@ var scene = (function (_, objs) {
 
 var renderer = (function (_){
     var renderer = new _.WebGLRenderer();
+    renderer.setClearColor(0xFFFFFF,1.0);
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.appendChild( renderer.domElement );
     return renderer;
 })(THREE);
 
 var camera = (function (_){
-    var camera = new _.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    var camera = new _.PerspectiveCamera( 65, window.innerWidth/window.innerHeight, 0.1, 1000);
     camera.position.z = 5;
+    camera.position.y = 1;
+    camera.position.x = 2;
     return {
         body : camera,
         behavior : function() {
@@ -79,3 +87,24 @@ var app = (function(s,c,r,objs) {
         run: this.run
     }
 })(scene,camera,renderer,objects);
+
+var register =(function(window, objects){
+    for(var key in objects) {
+        switch (objects[key].on) {
+            case 'mouse move':
+//                document.addEventListener('click', proxy(app, app.run), false);
+                var obj = objects[key];
+                document.onmouseup = function(e) {
+                    obj.body.position.x = e.clientX/500;
+                    obj.body.position.y = window.innerHeight/500 - e.clientY/500;
+                    app.run.apply(app);
+                };
+                break;
+            default :
+        }
+    }
+
+})(window, objects);
+
+
+
