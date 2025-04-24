@@ -8,7 +8,7 @@
           <mxGeometry x="180" y="150" width="470" height="110" as="geometry" />
         </mxCell>
         <mxCell id="egk-KhjPaGmCaVF-55JU-1" value="sol" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
-          <mxGeometry x="260" y="170" width="60" height="80" as="geometry" />
+          <mxGeometry x="286" y="165" width="60" height="80" as="geometry" />
         </mxCell>
         <mxCell id="egk-KhjPaGmCaVF-55JU-2" value="eth" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
           <mxGeometry x="390" y="170" width="60" height="80" as="geometry" />
@@ -20,14 +20,14 @@
           <mxGeometry x="180" y="150" width="90" height="40" as="geometry" />
         </mxCell>
         <mxCell id="egk-KhjPaGmCaVF-55JU-7" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
-          <mxGeometry x="186" y="350" width="140" height="260" as="geometry" />
+          <mxGeometry x="186" y="350" width="154" height="260" as="geometry" />
         </mxCell>
         <mxCell id="egk-KhjPaGmCaVF-55JU-8" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;Archive Data Writer&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="190" y="350" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="egk-KhjPaGmCaVF-55JU-9" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="egk-KhjPaGmCaVF-55JU-9" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0.4;exitY=0.981;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="egk-KhjPaGmCaVF-55JU-1" target="egk-KhjPaGmCaVF-55JU-8">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="277" y="250" as="sourcePoint" />
+            <mxPoint x="310" y="250" as="sourcePoint" />
             <mxPoint x="277" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -47,7 +47,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="egk-KhjPaGmCaVF-55JU-14" value="Consumer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="240" y="380" width="70" height="110" as="geometry" />
+          <mxGeometry x="270" y="380" width="70" height="110" as="geometry" />
         </mxCell>
         <mxCell id="egk-KhjPaGmCaVF-55JU-15" value="Data Merger" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="196" y="540" width="120" height="60" as="geometry" />
@@ -59,16 +59,34 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="egk-KhjPaGmCaVF-55JU-18" value="1.1 batch fetch messages" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="186" y="278" width="160" height="30" as="geometry" />
+          <mxGeometry x="156" y="278" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="egk-KhjPaGmCaVF-55JU-20" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="egk-KhjPaGmCaVF-55JU-15">
+        <mxCell id="egk-KhjPaGmCaVF-55JU-20" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="egk-KhjPaGmCaVF-55JU-15" target="egk-KhjPaGmCaVF-55JU-21">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="210" y="750" as="sourcePoint" />
             <mxPoint x="256" y="700" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="egk-KhjPaGmCaVF-55JU-21" value="s3" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
-          <mxGeometry x="226" y="700" width="60" height="80" as="geometry" />
+          <mxGeometry x="226" y="680" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="egk-KhjPaGmCaVF-55JU-22" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;s3://{bucket}/{chain}/{blockid}/&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="280" y="680" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="egk-KhjPaGmCaVF-55JU-23" value="1.2 batch write" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="96" y="360" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="egk-KhjPaGmCaVF-55JU-24" value="1.3 batch write success" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="430" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="egk-KhjPaGmCaVF-55JU-25" value="1.4 commit offset" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="316" y="300" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="egk-KhjPaGmCaVF-55JU-26" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.617;entryY=0.969;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="egk-KhjPaGmCaVF-55JU-14" target="egk-KhjPaGmCaVF-55JU-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="490" as="sourcePoint" />
+            <mxPoint x="370" y="400" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
