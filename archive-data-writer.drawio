@@ -52,9 +52,9 @@
         <mxCell id="egk-KhjPaGmCaVF-55JU-15" value="Data Merger" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="196" y="540" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="egk-KhjPaGmCaVF-55JU-17" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="egk-KhjPaGmCaVF-55JU-11" target="egk-KhjPaGmCaVF-55JU-15">
+        <mxCell id="egk-KhjPaGmCaVF-55JU-17" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" target="egk-KhjPaGmCaVF-55JU-15">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="70" y="620" as="sourcePoint" />
+            <mxPoint x="60" y="500" as="sourcePoint" />
             <mxPoint x="120" y="570" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -87,6 +87,21 @@
             <mxPoint x="270" y="490" as="sourcePoint" />
             <mxPoint x="370" y="400" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="egk-KhjPaGmCaVF-55JU-27" value="2.1 fetch data" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="500" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="egk-KhjPaGmCaVF-55JU-28" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.325;entryY=1.011;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="egk-KhjPaGmCaVF-55JU-15" target="egk-KhjPaGmCaVF-55JU-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="40" y="545" as="sourcePoint" />
+            <mxPoint x="186" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="egk-KhjPaGmCaVF-55JU-29" value="2.3 replace s3 file" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="630" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="egk-KhjPaGmCaVF-55JU-31" value="2.4 delete" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="540" width="130" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
